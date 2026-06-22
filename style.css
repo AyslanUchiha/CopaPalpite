@@ -284,11 +284,5 @@ max-width: 750px;
     cursor: pointer;
     transition: background 0.2s, transform 0.1s;
   }
-  .btn-salvar:hover
-{
-    background: #2a5fa8;
-}
-.btn-salvar:active
-{
-transform: scale(0.98);
-}
+  .btn-salvar:hover{background: #2a5fa8;}
+.btn-salvar:active{transform: scale(0.98);}
