@@ -3,3 +3,159 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+  background: #0a0a0a;
+  color: #f5f7fa;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+header {
+  background: #0b1f3a;
+  border-bottom: 3px solid #1e4d8c;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  gap: 16px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #f5f7fa;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo span { color: #1e4d8c; }
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+.nav-links li { flex-shrink: 0; }
+
+.nav-links label {
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: #f5f7fa;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 4px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.nav-links label:hover {
+  color: #1e4d8c;
+  border-bottom-color: #1e4d8c;
+}
+.nav-links label.nav-login {
+  background: #1e4d8c;
+  padding: 8px 18px;
+  border-radius: 4px;
+  color: #f5f7fa;
+  border-bottom: none;
+}
+.nav-links label.nav-login:hover {
+  background: #2a5fa8;
+  color: #f5f7fa;
+}
+
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.nav-radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+}
+/*
+Seleciona todos os main com o id iniciando em "page-" e os esconde
+*/
+main[id^="page-"] { display: none; opacity: 0; }
+/*
+Verifica o checked dos inputs e exibe o main correspondente ao input selecionado.
+*/
+#nav-inicio:checked ~ #page-inicio,
+#nav-sobre:checked ~ #page-sobre,
+#nav-simulador:checked ~ #page-simulador,
+#nav-galeria:checked ~ #page-galeria,
+#nav-login:checked ~ #page-login {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.45s ease-out;
+}
+/*
+Efeito de click. O nomeia que ao ser clicado(Checked) ele assume o efeito de coloração e borda.
+*/
+#nav-inicio:checked ~ header label[for="nav-inicio"],
+#nav-sobre:checked ~ header label[for="nav-sobre"],
+#nav-simulador:checked ~ header label[for="nav-simulador"],
+#nav-galeria:checked ~ header label[for="nav-galeria"] {
+  color: #1e4d8c;
+  border-bottom-color: #1e4d8c;
+}
+/*
+Coloração do botão de login ao ser clicado(Checked).
+*/
+#nav-login:checked ~ header label[for="nav-login"] { background: #22519283;}
+/*
+Efeito de foco para navegar com o teclado(Tab).
+*/
+#nav-inicio:focus-visible ~ header label[for="nav-inicio"],
+#nav-sobre:focus-visible ~ header label[for="nav-sobre"],
+#nav-simulador:focus-visible ~ header label[for="nav-simulador"],
+#nav-galeria:focus-visible ~ header label[for="nav-galeria"],
+#nav-login:focus-visible ~ header label[for="nav-login"] {
+  outline: 2px solid #1e4d8c;
+  outline-offset: 2px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #f5f7fa;
+  border-left: 5px solid #1e4d8c;
+  padding-left: 14px;
+  margin-bottom: 30px;
+}
+
+footer {
+  background: #0b1f3a;
+  border-top: 3px solid #1e4d8c;
+  text-align: center;
+  padding: 24px 20px;
+  color: #9fb0cc;
+  font-size: 0.85rem;
+}
+/*
+Ao reduzir a largura da tela para 700px ou menos, assume novo layout.
+*/
+@media (max-width: 700px) {
+  .nav-links { gap: 16px; }
+  .nav-links label { font-size: 0.85rem; white-space: nowrap; }
+  section { padding: 40px 16px; }
+}
