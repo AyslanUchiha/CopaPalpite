@@ -93,13 +93,7 @@ section {
   width: 0;
   height: 0;
 }
-/*
-Seleciona todos os main com o id iniciando em "page-" e os esconde
-*/
 main[id^="page-"] { display: none; opacity: 0; }
-/*
-Verifica o checked dos inputs e exibe o main correspondente ao input selecionado.
-*/
 #nav-inicio:checked ~ #page-inicio,
 #nav-sobre:checked ~ #page-sobre,
 #nav-simulador:checked ~ #page-simulador,
@@ -109,23 +103,13 @@ Verifica o checked dos inputs e exibe o main correspondente ao input selecionado
   opacity: 1;
   transition: opacity 0.45s ease-out;
 }
-/*
-Efeito de click. O nomeia que ao ser clicado(Checked) ele assume o efeito de coloração e borda.
-*/
 #nav-inicio:checked ~ header label[for="nav-inicio"],
 #nav-sobre:checked ~ header label[for="nav-sobre"],
 #nav-simulador:checked ~ header label[for="nav-simulador"],
 #nav-galeria:checked ~ header label[for="nav-galeria"] {
   color: #1e4d8c;
   border-bottom-color: #1e4d8c;
-}
-/*
-Coloração do botão de login ao ser clicado(Checked).
-*/
 #nav-login:checked ~ header label[for="nav-login"] { background: #22519283;}
-/*
-Efeito de foco para navegar com o teclado(Tab).
-*/
 #nav-inicio:focus-visible ~ header label[for="nav-inicio"],
 #nav-sobre:focus-visible ~ header label[for="nav-sobre"],
 #nav-simulador:focus-visible ~ header label[for="nav-simulador"],
@@ -151,9 +135,6 @@ footer {
   color: #9fb0cc;
   font-size: 0.85rem;
 }
-/*
-Ao reduzir a largura da tela para 700px ou menos, assume novo layout.
-*/
 @media (max-width: 700px) {
   .nav-links { gap: 16px; }
   .nav-links label { font-size: 0.85rem; white-space: nowrap; }
@@ -200,26 +181,114 @@ Ao reduzir a largura da tela para 700px ou menos, assume novo layout.
   border-radius: 8px;
   padding: 22px;
 }
-.pontuacao-box h3 {
+.pontuacao-box h3{
   color: #1e4d8c;
   margin-bottom: 12px;
 }
-.pontuacao-tabela {
+.pontuacao-tabela
+{
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
 }
 .pontuacao-tabela th,
-.pontuacao-tabela td {
+.pontuacao-tabela td
+{
   border: 1px solid #2a3f5f;
   padding: 10px 14px;
   text-align: left;
   font-size: 0.92rem;
 }
-.pontuacao-tabela th {
+.pontuacao-tabela th
+{
   background: #122b4d;
   color: #1e4d8c;
   text-transform: uppercase;
   font-size: 0.78rem;
   letter-spacing: 0.5px;
+}
+.simulador-intro
+{
+color: #c9d4e6;
+margin-bottom: 30px;
+max-width: 750px;
+}
+  .grupos-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+  }
+  @media (min-width: 900px){
+    .grupos-grid{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .grupo-card{
+    background: #122b4d;
+    border: 1px solid #2a3f5f;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
+  .grupo-card h3{
+    color: #1e4d8c;
+    border-bottom: 1px solid #2a3f5f;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    font-size: 1.1rem;
+  }
+
+  .palpite-row{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .palpite-row label{
+    flex: 0 0 110px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f5f7fa;
+  }
+
+  .palpite-row select{
+    flex: 1;
+    padding: 9px 10px;
+    background: #0a0a0a;
+    color: #f5f7fa;
+    border: 1px solid #2a3f5f;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
+
+  .palpite-row select:focus{
+    outline: 2px solid #1e4d8c;
+  }
+
+  .pos-1 label{ color: #ffd75e; }
+  .pos-2 label{ color: #cfd6e3; }
+  .pos-3 label{ color: #e0a96d; }
+
+  .btn-salvar{
+    display: block;
+    margin: 36px auto 0;
+    padding: 14px 40px;
+    background: #1e4d8c;
+    color: #f5f7fa;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn-salvar:hover
+{
+    background: #2a5fa8;
+}
+.btn-salvar:active
+{
+transform: scale(0.98);
 }
