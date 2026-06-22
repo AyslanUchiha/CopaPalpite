@@ -109,6 +109,7 @@ main[id^="page-"] { display: none; opacity: 0; }
 #nav-galeria:checked ~ header label[for="nav-galeria"] {
   color: #1e4d8c;
   border-bottom-color: #1e4d8c;
+} /* Erro de Sintaxe */
 #nav-login:checked ~ header label[for="nav-login"] { background: #22519283;}
 #nav-inicio:focus-visible ~ header label[for="nav-inicio"],
 #nav-sobre:focus-visible ~ header label[for="nav-sobre"],
