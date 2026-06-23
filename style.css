@@ -119,24 +119,24 @@ main[id^="page-"] { display: none; opacity: 0; }
   outline: 2px solid #1e4d8c;
   outline-offset: 2px;
 }
-.hero{
+.copa{
     background: linear-gradient(135deg, #0b1f3a 0%, #0a0a0a 100%);
     border-bottom: 1px solid #2a3f5f;
     padding: 70px 20px;
     text-align: center;
   }
 
-  .hero h1{
+  .copa h1{
     font-size: clamp(2rem, 5vw, 3.2rem);
     color: #f5f7fa;
     margin-bottom: 14px;
   }
 
-  .hero h1 span{
+  .copa h1 span{
     color: #1e4d8c;
   }
 
-  .hero p{
+  .copa p{
     max-width: 700px;
     margin: 0 auto;
     color: #c9d4e6;
