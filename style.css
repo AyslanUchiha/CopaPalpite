@@ -208,6 +208,92 @@ footer {
   font-size: 0.78rem;
   letter-spacing: 0.5px;
 }
+.login-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+
+  .login-box{
+    background: #122b4d;
+    border: 1px solid #2a3f5f;
+    border-radius: 10px;
+    padding: 40px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .login-box h2{
+    text-align: center;
+    margin-bottom: 6px;
+    color: #f5f7fa;
+  }
+
+  .login-box .subtitle{
+    text-align: center;
+    color: #9fb0cc;
+    font-size: 0.88rem;
+    margin-bottom: 26px;
+  }
+
+  .form-group{
+    margin-bottom: 18px;
+  }
+
+  .form-group label{
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+    color: #c9d4e6;
+    font-weight: 600;
+  }
+
+  .form-group input{
+    width: 100%;
+    padding: 12px 14px;
+    background: #0a0a0a;
+    border: 1px solid #2a3f5f;
+    border-radius: 6px;
+    color: #f5f7fa;
+    font-size: 0.95rem;
+  }
+
+  .form-group input:focus{
+    outline: 2px solid #1e4d8c;
+    border-color: #1e4d8c;
+  }
+
+  .btn-entrar{
+    width: 100%;
+    padding: 13px;
+    background: #1e4d8c;
+    color: #f5f7fa;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+  }
+
+  .btn-entrar:hover{
+    background: #2a5fa8;
+  }
+
+  .login-footer{
+    text-align: center;
+    margin-top: 18px;
+    font-size: 0.85rem;
+    color: #9fb0cc;
+  }
+
+  .login-footer strong{
+    color: #1e4d8c;
+    font-weight: 600;
+  }
 .simulador-intro
 {
 color: #c9d4e6;
