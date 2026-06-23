@@ -141,7 +141,7 @@ main[id^="page-"] { display: none; opacity: 0; }
     margin: 0 auto;
     color: #c9d4e6;
     font-size: 1.05rem;
-
+}
     .introducao{
     display: inline-block;
     background: #1e4d8c;
